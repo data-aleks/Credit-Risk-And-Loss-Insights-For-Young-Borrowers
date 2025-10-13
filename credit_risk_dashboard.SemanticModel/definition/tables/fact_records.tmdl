@@ -1,0 +1,120 @@
+table fact_records
+	lineageTag: 224d8f87-ac17-48ca-ad9b-27f841baa924
+
+	column record_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 887b98db-8937-4915-bce5-b9e264c68ddb
+		summarizeBy: sum
+		sourceColumn: record_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: decimal
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 3a5da7be-cee7-4ad7-8b36-cbd3a87a5c53
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column interest_rate
+		dataType: double
+		lineageTag: 81d44b95-1edf-4568-8bb8-b79e1e9cd14b
+		summarizeBy: sum
+		sourceColumn: interest_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column client_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8c3f7be1-3361-4d25-af5a-7e063f3ebef6
+		summarizeBy: none
+		sourceColumn: client_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column grade_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 05c5a17c-43eb-46ac-8587-eb24db921424
+		summarizeBy: none
+		sourceColumn: grade_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column purpose_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2005048b-4e18-449a-94dc-69791c276271
+		summarizeBy: none
+		sourceColumn: purpose_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3f52d6e0-b1f5-4c9b-8ccd-15f403328ddb
+		summarizeBy: none
+		sourceColumn: status_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_records = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("127.0.0.1", "credit_risk_data", [ReturnSingleDatabase=true]),
+				    credit_risk_data_credit_risk_dataset = Source{[Schema="credit_risk_data",Item="credit_risk_dataset"]}[Data],
+				    #"Added Index" = Table.AddIndexColumn(credit_risk_data_credit_risk_dataset, "Index", 0, 1, Int64.Type),
+				    #"Renamed Columns [index]" = Table.RenameColumns(#"Added Index",{{"Index", "record_id"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns [index]",{"record_id", "person_age", "person_income", "person_home_ownership", "person_emp_length", "loan_intent", "loan_grade", "loan_amnt", "loan_int_rate", "loan_status", "loan_percent_income", "cb_person_default_on_file", "cb_person_cred_hist_length"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"loan_intent", "purpose"}, {"loan_amnt", "amount"}, {"loan_int_rate", "interest_rate"}, {"loan_percent_income", "loan_to_income"}, {"cb_person_default_on_file", "historic_defaults"}, {"cb_person_cred_hist_length", "credit_history_length"}, {"loan_grade", "grade"}, {"person_emp_length", "employment_length"}, {"person_home_ownership", "residential_status"}, {"person_income", "income"}, {"person_age", "age"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"loan_to_income", Percentage.Type}, {"amount", Currency.Type}, {"income", Currency.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "status", each if [loan_status] = 1 then "Default" else if [loan_status] = 0 then "Active" else null),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Conditional Column",{"loan_status"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "interest_rate_n", each [interest_rate] / 100),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"interest_rate"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"interest_rate_n", "interest_rate"}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns1",{{"interest_rate", Percentage.Type}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type1",{{"purpose", Text.Proper, type text}, {"residential_status", Text.Proper, type text}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Capitalized Each Word", {"residential_status"}, dim_residential_status, {"residential_status"}, "dim_residential_status", JoinKind.LeftOuter),
+				    #"Merged Queries1" = Table.NestedJoin(#"Merged Queries", {"record_id"}, dim_client, {"client_key"}, "dim_client", JoinKind.LeftOuter),
+				    #"Merged Queries2" = Table.NestedJoin(#"Merged Queries1", {"grade"}, dim_grade, {"grade"}, "dim_grade", JoinKind.LeftOuter),
+				    #"Merged Queries3" = Table.NestedJoin(#"Merged Queries2", {"purpose"}, dim_purpose, {"purpose"}, "dim_purpose", JoinKind.LeftOuter),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Merged Queries3",{"credit_history_length", "historic_defaults", "loan_to_income", "grade", "purpose", "employment_length", "residential_status", "income", "age"}),
+				    #"Expanded dim_residential_status" = Table.ExpandTableColumn(#"Removed Columns2", "dim_residential_status", {"residential_status_key"}, {"residential_status_key"}),
+				    #"Expanded dim_client" = Table.ExpandTableColumn(#"Expanded dim_residential_status", "dim_client", {"client_key"}, {"client_key"}),
+				    #"Expanded dim_grade" = Table.ExpandTableColumn(#"Expanded dim_client", "dim_grade", {"grade_key"}, {"grade_key"}),
+				    #"Expanded dim_purpose" = Table.ExpandTableColumn(#"Expanded dim_grade", "dim_purpose", {"purpose_key"}, {"purpose_key"}),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Expanded dim_purpose",{"record_id", "amount", "interest_rate", "status", "residential_status_key", "client_key", "grade_key", "purpose_key"}),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Reordered Columns1",{"residential_status_key"}),
+				    #"Merged Queries4" = Table.NestedJoin(#"Removed Columns3", {"status"}, dim_status, {"status"}, "dim_status", JoinKind.LeftOuter),
+				    #"Expanded dim_status" = Table.ExpandTableColumn(#"Merged Queries4", "dim_status", {"status_key"}, {"status_key"}),
+				    #"Removed Columns4" = Table.RemoveColumns(#"Expanded dim_status",{"status"})
+				in
+				    #"Removed Columns4"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
