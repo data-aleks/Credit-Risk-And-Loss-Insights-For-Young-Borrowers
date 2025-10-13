@@ -1,10 +1,23 @@
-table 'credit_risk_data credit_risk_dataset'
-	lineageTag: eae9ee2b-10b6-47b0-9d02-59d3f9a8182b
+table dim_client
+	excludeFromModelRefresh
+	lineageTag: 799d1fc9-56f3-445d-bb07-b0ea005863e2
+
+	column client_key
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f5380162-f290-417e-aa08-dfd9d4039dbf
+		summarizeBy: none
+		sourceColumn: client_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
 
 	column age
 		dataType: int64
 		formatString: 0
-		lineageTag: 8f58d116-b6e8-47e0-954f-57b1d24d8dc2
+		lineageTag: 916f1068-654c-411f-8fdb-f24ffa6ed5f0
 		summarizeBy: sum
 		sourceColumn: age
 
@@ -12,24 +25,18 @@ table 'credit_risk_data credit_risk_dataset'
 
 	column income
 		dataType: decimal
-		formatString: 0
-		lineageTag: 42a41bbb-7bdb-42ce-97f2-b0082fc2f599
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		lineageTag: 263719c0-487e-4837-9c3e-c060584694d0
 		summarizeBy: sum
 		sourceColumn: income
 
 		annotation SummarizationSetBy = Automatic
 
-	column residential_status
-		dataType: string
-		lineageTag: e4b54579-c29c-4ea2-8179-a3b7f7f43ddf
-		summarizeBy: none
-		sourceColumn: residential_status
-
-		annotation SummarizationSetBy = Automatic
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	column employment_length
 		dataType: double
-		lineageTag: 72e99c27-d03c-4f14-aac0-c25ba0fb741d
+		lineageTag: 3aabd6e0-1af4-4a7b-b6d1-11153bbf87fc
 		summarizeBy: sum
 		sourceColumn: employment_length
 
@@ -37,44 +44,9 @@ table 'credit_risk_data credit_risk_dataset'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column purpose
-		dataType: string
-		lineageTag: 7623b3f3-b62f-4d43-98f2-d856a6ead936
-		summarizeBy: none
-		sourceColumn: purpose
-
-		annotation SummarizationSetBy = Automatic
-
-	column grade
-		dataType: string
-		lineageTag: fadadc87-9727-492e-9860-fa9dd30a9079
-		summarizeBy: none
-		sourceColumn: grade
-
-		annotation SummarizationSetBy = Automatic
-
-	column amount
-		dataType: decimal
-		formatString: 0
-		lineageTag: 4abfbbfa-b71f-47f0-b7b3-2fed00c06638
-		summarizeBy: sum
-		sourceColumn: amount
-
-		annotation SummarizationSetBy = Automatic
-
-	column loan_to_income
-		dataType: double
-		lineageTag: a2be19bf-3376-400d-b1c3-9e72b05ed3b8
-		summarizeBy: sum
-		sourceColumn: loan_to_income
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column historic_defaults
 		dataType: string
-		lineageTag: f82e0d22-ff9f-40d6-890e-b844704d6fbe
+		lineageTag: 984696a4-2e93-4e32-8f4c-e653c8ca0845
 		summarizeBy: none
 		sourceColumn: historic_defaults
 
@@ -83,40 +55,22 @@ table 'credit_risk_data credit_risk_dataset'
 	column credit_history_length
 		dataType: int64
 		formatString: 0
-		lineageTag: 9a491248-dd94-40eb-b73b-dcd5cac0144c
+		lineageTag: bdb23a65-6c95-41d8-902f-d5a9cc463f69
 		summarizeBy: sum
 		sourceColumn: credit_history_length
 
 		annotation SummarizationSetBy = Automatic
 
-	column record_id
+	column residential_status_key
 		dataType: int64
 		formatString: 0
-		lineageTag: c813ceaf-9d8f-4ed6-9564-f54fd4c1a30e
-		summarizeBy: sum
-		sourceColumn: record_id
-
-		annotation SummarizationSetBy = Automatic
-
-	column status
-		dataType: string
-		lineageTag: c42f8016-cf58-4db9-9f0f-ab865057aedb
+		lineageTag: bde5cfe9-5e1c-4c1b-806c-2d8abb96ffb6
 		summarizeBy: none
-		sourceColumn: status
+		sourceColumn: residential_status_key
 
 		annotation SummarizationSetBy = Automatic
 
-	column interest_rate
-		dataType: double
-		lineageTag: 5e0b92c8-32fc-4bf7-a44e-1365958de2de
-		summarizeBy: sum
-		sourceColumn: interest_rate
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	partition 'credit_risk_data credit_risk_dataset' = m
+	partition dim_client = m
 		mode: import
 		source =
 				let
@@ -133,9 +87,16 @@ table 'credit_risk_data credit_risk_dataset'
 				    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"interest_rate"}),
 				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"interest_rate_n", "interest_rate"}}),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Renamed Columns1",{{"interest_rate", Percentage.Type}}),
-				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type1",{{"purpose", Text.Proper, type text}, {"residential_status", Text.Proper, type text}})
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type1",{{"purpose", Text.Proper, type text}, {"residential_status", Text.Proper, type text}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Capitalized Each Word",{{"record_id", "client_key"}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Renamed Columns2",{"purpose", "grade", "amount", "loan_to_income", "status", "interest_rate"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns2", {"residential_status"}, dim_residential_status, {"residential_status"}, "dim_residential_status", JoinKind.LeftOuter),
+				    #"Removed Columns3" = Table.RemoveColumns(#"Merged Queries",{"residential_status"}),
+				    #"Expanded dim_residential_status" = Table.ExpandTableColumn(#"Removed Columns3", "dim_residential_status", {"residential_status_key"}, {"residential_status_key"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Expanded dim_residential_status","Y","Yes",Replacer.ReplaceText,{"historic_defaults"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","N","No",Replacer.ReplaceText,{"historic_defaults"})
 				in
-				    #"Capitalized Each Word"
+				    #"Replaced Value1"
 
 	annotation PBI_NavigationStepName = Navigation
 
