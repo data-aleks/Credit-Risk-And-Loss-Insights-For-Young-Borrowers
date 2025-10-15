@@ -4,10 +4,10 @@
   "position": {
     "x": 1317,
     "y": 710,
-    "z": 2006,
+    "z": 8000,
     "height": 340,
     "width": 603,
-    "tabOrder": 2006
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -75,23 +75,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5ff56f7a2dacb6276ad0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_records"
-              }
-            },
-            "Property": "interest_rate (bins)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

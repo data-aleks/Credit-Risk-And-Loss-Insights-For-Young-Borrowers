@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "aed4702bc45bd0057b76",
   "position": {
-    "x": 528.56882406563352,
-    "y": 470.81130355515035,
-    "z": 8,
-    "height": 220.52871467639014,
-    "width": 187.27438468550591,
-    "tabOrder": 8
+    "x": 280,
+    "y": 160,
+    "z": 8000,
+    "height": 128.33333333333334,
+    "width": 265,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "fact_records"
                     }
                   },
-                  "Property": "Default Records"
+                  "Property": "Default Rate"
                 }
               },
-              "queryRef": "fact_records.Default Records",
-              "nativeQueryRef": "Default Records"
+              "queryRef": "fact_records.Default Rate",
+              "nativeQueryRef": "Default Rate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "fact_records"
                   }
                 },
-                "Property": "Default Records"
+                "Property": "Default Rate"
               }
             },
             "direction": "Descending"

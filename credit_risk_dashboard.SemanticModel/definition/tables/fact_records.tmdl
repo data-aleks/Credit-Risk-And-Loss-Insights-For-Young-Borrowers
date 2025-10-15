@@ -107,6 +107,12 @@ table fact_records
 		displayFolder: [Age Below 30]
 		lineageTag: c9c09d70-4e12-4240-a4b0-403af801a5eb
 
+	measure 'Active <30 vs Active Overall' = ```
+			[Active Accounts < 30]/[Active Accounts] 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a70c1d74-fc2f-4db4-bacc-b3fb3e3ed9d8
+
 	column record_id
 		dataType: int64
 		formatString: 0
