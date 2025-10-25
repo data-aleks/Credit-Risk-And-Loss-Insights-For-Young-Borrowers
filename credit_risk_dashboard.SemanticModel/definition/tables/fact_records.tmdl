@@ -93,7 +93,7 @@ table fact_records
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: f4352f67-55b5-4405-8191-f26f6fc14db8
 
-	measure 'Active 30+ Accounts' = ```
+	measure 'Active Over 30 Accounts' = ```
 			CALCULATE(DISTINCTCOUNT(fact_records[record_id]), FILTER(dim_status, dim_status[status] = "Active"), FILTER(dim_client, dim_client[age] > 30 && dim_client[age] <= 65)) 
 			```
 		formatString: 0
@@ -107,7 +107,7 @@ table fact_records
 		displayFolder: [Age Below 30]
 		lineageTag: c9c09d70-4e12-4240-a4b0-403af801a5eb
 
-	measure 'Active <30 vs Active Overall' = ```
+	measure 'Percent of all active accounts' = ```
 			[Active Accounts < 30]/[Active Accounts] 
 			```
 		formatString: 0.00%;-0.00%;0.00%
@@ -296,6 +296,24 @@ table fact_records
 
 		annotation SummarizationSetBy = Automatic
 
+	column risk_score
+		dataType: double
+		lineageTag: 0db5735a-25a1-42aa-b2fe-896b8eb4446b
+		summarizeBy: sum
+		sourceColumn: risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column risk_level
+		dataType: string
+		lineageTag: bc10ae6f-b520-491b-b988-918aa526e939
+		summarizeBy: none
+		sourceColumn: risk_level
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_records = m
 		mode: import
 		source =
@@ -328,9 +346,11 @@ table fact_records
 				    #"Removed Columns2" = Table.RemoveColumns(#"Expanded dim_purpose.1",{"dim_purpose"}),
 				    #"Merged Queries5" = Table.NestedJoin(#"Removed Columns2", {"status"}, dim_status, {"status"}, "dim_status", JoinKind.LeftOuter),
 				    #"Expanded dim_status" = Table.ExpandTableColumn(#"Merged Queries5", "dim_status", {"status_key"}, {"status_key"}),
-				    #"Removed Columns3" = Table.RemoveColumns(#"Expanded dim_status",{"status", "historic_defaults", "credit_history_length", "residential_status", "grade", "purpose", "income", "age", "employment_length"})
+				    #"Removed Columns3" = Table.RemoveColumns(#"Expanded dim_status",{"status", "historic_defaults", "credit_history_length", "residential_status", "grade", "purpose", "income", "age", "employment_length"}),
+				    #"Merged Queries6" = Table.NestedJoin(#"Removed Columns3", {"record_id"}, #"credit_risk_data credit_risk_dataset", {"record_id"}, "credit_risk_data credit_risk_dataset", JoinKind.LeftOuter),
+				    #"Expanded credit_risk_data credit_risk_dataset" = Table.ExpandTableColumn(#"Merged Queries6", "credit_risk_data credit_risk_dataset", {"risk_score", "risk_level"}, {"risk_score", "risk_level"})
 				in
-				    #"Removed Columns3"
+				    #"Expanded credit_risk_data credit_risk_dataset"
 
 	annotation PBI_NavigationStepName = Navigation
 

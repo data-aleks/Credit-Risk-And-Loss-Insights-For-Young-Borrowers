@@ -6,31 +6,13 @@
     "y": 710,
     "z": 2000,
     "height": 340,
-    "width": 640
+    "width": 640,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_client"
-                    }
-                  },
-                  "Property": "Employment Length Bins"
-                }
-              },
-              "queryRef": "dim_client.Employment Length Bins",
-              "nativeQueryRef": "Employment Length Bins",
-              "active": true
-            }
-          ]
-        },
         "Tooltips": {
           "projections": [
             {
@@ -46,6 +28,25 @@
               },
               "queryRef": "fact_records.Default Records",
               "nativeQueryRef": "Default Records"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_client"
+                    }
+                  },
+                  "Property": "Employment Length Bins"
+                }
+              },
+              "queryRef": "dim_client.Employment Length Bins",
+              "nativeQueryRef": "Employment Length Bins",
+              "active": true
             }
           ]
         },
