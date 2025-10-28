@@ -6,8 +6,7 @@
     "y": 0,
     "z": 2000,
     "height": 288,
-    "width": 400,
-    "tabOrder": 1000
+    "width": 400
   },
   "visual": {
     "visualType": "pythonVisual",

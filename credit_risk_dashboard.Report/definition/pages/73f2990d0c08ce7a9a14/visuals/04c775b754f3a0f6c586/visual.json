@@ -18,7 +18,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Can we use loan to income ration to identify high risk accounts?",
+                    "value": "Default Accounts by Loan to Income Brackets",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",

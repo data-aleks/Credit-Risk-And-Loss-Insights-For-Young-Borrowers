@@ -6,8 +6,7 @@
     "y": 710,
     "z": 8000,
     "height": 340,
-    "width": 603,
-    "tabOrder": 1000
+    "width": 603
   },
   "visual": {
     "visualType": "scatterChart",

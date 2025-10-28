@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5e8fb42c2918bbc2187f",
+  "name": "dbc957d0032c52050677",
   "position": {
-    "x": 1056.8648648648648,
-    "y": 17.2972972972973,
-    "z": 10000,
-    "height": 153.94594594594594,
-    "width": 513.72972972972968,
-    "tabOrder": 1000
+    "x": 532.88135593220341,
+    "y": 16.271186440677965,
+    "z": 10001,
+    "height": 154.57627118644069,
+    "width": 512.542372881356,
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "fact_records"
                     }
                   },
-                  "Property": "High Risk Accounts"
+                  "Property": "Static High Risk Default Loss"
                 }
               },
-              "queryRef": "fact_records.High Risk Accounts",
-              "nativeQueryRef": "High Risk Accounts"
+              "queryRef": "fact_records.Static High Risk Default Loss",
+              "nativeQueryRef": "Static High Risk Default Loss"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "fact_records"
                   }
                 },
-                "Property": "High Risk Accounts"
+                "Property": "Static High Risk Default Loss"
               }
             },
             "direction": "Descending"
@@ -52,6 +52,53 @@
       }
     },
     "objects": {
+      "value": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_records.Static High Risk Default Loss"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "referenceLabel": [
         {
           "properties": {
@@ -63,7 +110,7 @@
                       "Entity": "fact_records"
                     }
                   },
-                  "Property": "high_risk_count [dynamic]"
+                  "Property": "Dynamic High Risk Default Amount"
                 }
               }
             }
@@ -76,9 +123,25 @@
                 }
               }
             ],
-            "metadata": "fact_records.High Risk Accounts",
-            "id": "field-53f5077b-5fea-71ca-a18d-505be54949ad",
+            "metadata": "fact_records.Static High Risk Default Loss",
+            "id": "field-a15c965b-fefa-5794-d843-957b0957da65",
             "order": 0
+          }
+        }
+      ],
+      "referenceLabelTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_records.Static High Risk Default Loss"
           }
         }
       ],
@@ -94,23 +157,7 @@
             }
           },
           "selector": {
-            "metadata": "fact_records.High Risk Accounts"
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fact_records.High Risk Accounts"
+            "metadata": "fact_records.Static High Risk Default Loss"
           }
         },
         {
@@ -121,169 +168,18 @@
                   "Value": "false"
                 }
               }
-            }
-          },
-          "selector": {
-            "metadata": "fact_records.High Risk Accounts",
-            "id": "field-53f5077b-5fea-71ca-a18d-505be54949ad"
-          }
-        }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             },
-            "detailFontSize": {
+            "valuePrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "detailFontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "showBlankAs": {
-              "expr": {
-                "Literal": {
-                  "Value": "'--'"
+                  "Value": "2L"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "fact_records.High Risk Accounts",
-            "id": "field-53f5077b-5fea-71ca-a18d-505be54949ad"
-          }
-        },
-        {
-          "properties": {
-            "detailValue": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fact_records"
-                    }
-                  },
-                  "Property": "Static vs Dynamic Classification Change"
-                }
-              }
-            },
-            "detailFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact_records"
-                        }
-                      },
-                      "Property": "Classification Change Color"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "fact_records.High Risk Accounts",
-            "id": "field-53f5077b-5fea-71ca-a18d-505be54949ad"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fact_records.High Risk Accounts"
-          }
-        }
-      ],
-      "value": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "24D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fact_records.High Risk Accounts"
-          }
-        }
-      ],
-      "label": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fact_records.High Risk Accounts"
-          }
-        }
-      ],
-      "layout": [
-        {
-          "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
+            "metadata": "fact_records.Static High Risk Default Loss",
+            "id": "field-a15c965b-fefa-5794-d843-957b0957da65"
           }
         }
       ],
@@ -299,7 +195,95 @@
             }
           },
           "selector": {
-            "metadata": "fact_records.High Risk Accounts"
+            "metadata": "fact_records.Static High Risk Default Loss"
+          }
+        }
+      ],
+      "referenceLabelDetail": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_records.Static High Risk Default Loss"
+          }
+        },
+        {
+          "properties": {
+            "detailValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_records"
+                    }
+                  },
+                  "Property": "Static vs Dynamic Classification Amount"
+                }
+              }
+            },
+            "detailFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_records"
+                        }
+                      },
+                      "Property": "Classification Amount Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "fact_records.Static High Risk Default Loss",
+            "id": "field-a15c965b-fefa-5794-d843-957b0957da65"
+          }
+        },
+        {
+          "properties": {
+            "detailFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "detailFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_records.Static High Risk Default Loss",
+            "id": "field-a15c965b-fefa-5794-d843-957b0957da65"
           }
         }
       ]

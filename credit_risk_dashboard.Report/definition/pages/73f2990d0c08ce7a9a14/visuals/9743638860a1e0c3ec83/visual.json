@@ -6,7 +6,8 @@
     "y": 640.2,
     "z": 6000,
     "height": 108.33333333333334,
-    "width": 320
+    "width": 320,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -40,7 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "0.3D"
+                  "Value": "0.35D"
                 }
               }
             }
@@ -77,7 +78,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "0.3D"
+                            "Value": "0.35D"
                           }
                         }
                       }

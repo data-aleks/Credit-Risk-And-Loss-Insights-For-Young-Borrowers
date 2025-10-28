@@ -6,7 +6,8 @@
     "y": 0,
     "z": 8000,
     "height": 1080,
-    "width": 338.33333333333331
+    "width": 338.33333333333331,
+    "tabOrder": 9000
   },
   "visualGroup": {
     "displayName": "Sidebar",

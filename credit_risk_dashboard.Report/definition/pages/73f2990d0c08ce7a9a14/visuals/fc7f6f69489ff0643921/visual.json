@@ -6,7 +6,8 @@
     "y": 15.510136083052755,
     "z": 4000,
     "height": 68.244598765432116,
-    "width": 496.66666666666669
+    "width": 496.66666666666669,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Which age brackets of young people under 30 have the highest number of defaulted accounts?",
+                    "value": "Default Accounts by Age Bracket",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",

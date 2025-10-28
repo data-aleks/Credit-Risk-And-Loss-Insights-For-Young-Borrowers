@@ -6,7 +6,8 @@
     "y": 10.666666666666666,
     "z": 2000,
     "height": 69.333333333333329,
-    "width": 486.81111111111113
+    "width": 486.81111111111113,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "How does historical default behaviour affect current risk?",
+                    "value": "Impact of Prior Default on Current Risk",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",

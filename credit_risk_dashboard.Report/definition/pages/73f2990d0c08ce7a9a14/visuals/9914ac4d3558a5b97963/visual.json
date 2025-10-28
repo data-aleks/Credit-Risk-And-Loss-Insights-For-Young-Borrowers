@@ -6,7 +6,8 @@
     "y": 11.496141975308703,
     "z": 2000,
     "height": 69.333333333333329,
-    "width": 486.81111111111113
+    "width": 486.81111111111113,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Which loan intents are most associated with default rate?",
+                    "value": "Defaults by Loan Purpose",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",

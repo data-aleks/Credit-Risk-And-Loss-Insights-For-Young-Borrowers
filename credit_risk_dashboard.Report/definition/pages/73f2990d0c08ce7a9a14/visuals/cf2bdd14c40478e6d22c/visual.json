@@ -6,7 +6,8 @@
     "y": 8,
     "z": 2000,
     "height": 72,
-    "width": 492.80000000000007
+    "width": 492.80000000000007,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Currently at risk customers based on statistical regression model. ",
+                    "value": "Risk Level Classification of Accounts",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",

@@ -201,18 +201,99 @@ table fact_records
 		displayFolder: [Classification Static]
 		lineageTag: 5333eb7e-b880-46dc-a980-841c13c0af66
 
-	measure 'Static vs Dynamic Classification Change' =
-			IF(
+	measure 'Static vs Dynamic Classification Change' = ```
+			
+			IF (
 			    [High Risk Accounts] <> [high_risk_count [dynamic]]],
-			    DIVIDE(
-			        [high_risk_count [dynamic]]] - [High Risk Accounts],
-			        [High Risk Accounts]
-			    ),
+			    VAR AmountChange = [high_risk_count [dynamic]]] - [High Risk Accounts]
+			    VAR PercentChange = DIVIDE(AmountChange, [High Risk Accounts])
+			    VAR Icon = 
+			        SWITCH(
+			            TRUE(),
+			            AmountChange > 0, "🔴🔺",  // Red circle + red arrow for increase
+			            AmountChange < 0, "🟢🔻",  // Green circle + green arrow for decrease
+			            "⚪"                        // Neutral icon
+			        )
+			    RETURN
+			        Icon & " " & FORMAT(PercentChange, "0.00%") & " (" & FORMAT(AmountChange, "#,##0") & ")",
 			    BLANK()
 			)
-		formatString: 0.00%;-0.00%;0.00%
+			```
 		displayFolder: [Classification Comparison]
 		lineageTag: 79141b81-3f28-4337-9ceb-be7977a9f4e9
+
+	measure 'Static High Risk Default Loss' =
+			CALCULATE(
+			     SUM(fact_records[amount]),
+			     FILTER(dim_client, dim_client[age] < 30),
+			     FILTER(fact_records, fact_records[risk_level_static] = "High")
+			)
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: [Classification Static]
+		lineageTag: 5ea4b214-fa09-4285-99a7-1465152fd12e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Dynamic High Risk Default Amount' =
+			CALCULATE(
+			    SUM(fact_records[amount]),
+			    FILTER(dim_client, dim_client[age] < 30),
+			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.3)
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: [Classification Dynamic]
+		lineageTag: dbffb350-ac8d-41c7-82b2-590db35b798e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Static vs Dynamic Classification Amount' = ```
+			
+			IF (
+			    [Static High Risk Default Loss] <> [Dynamic High Risk Default Amount],
+			    VAR AmountChange = [Dynamic High Risk Default Amount] - [Static High Risk Default Loss]
+			    VAR PercentChange = DIVIDE(AmountChange, [Static High Risk Default Loss])
+			    VAR Icon = 
+			        SWITCH(
+			            TRUE(),
+			            AmountChange > 0, "🔴🔺",  // Red up arrow for increase
+			            AmountChange < 0, "🟢🔻",  // Green down arrow for decrease
+			            "⚪"                       // Neutral icon
+			        )
+			    RETURN
+			        Icon & " " & FORMAT(PercentChange, "0.00%") & " (" & FORMAT(AmountChange, "#,##0") & ")",
+			    BLANK()
+			)
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 5800e9b8-4c5f-4508-b26f-e2d697bdd985
+
+	measure 'Classification Change Color' = ```
+			
+			IF (
+			    [High Risk Accounts] <> [high_risk_count [dynamic]]],
+			    VAR AmountChange = [high_risk_count [dynamic]]] - [High Risk Accounts]
+			    RETURN
+			        IF(AmountChange > 0, "#FF0000", "#008000"),  // Red for increase, Green for decrease
+			    "#000000"  // Default black
+			)
+			
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 9d0ef098-4466-4ff7-a87e-bfebbf39c850
+
+	measure 'Classification Amount Color' = ```
+			
+			IF (
+			    [Static High Risk Default Loss] <> [Dynamic High Risk Default Amount],
+			    VAR AmountChange = [Dynamic High Risk Default Amount] - [Static High Risk Default Loss]
+			    RETURN
+			        IF(AmountChange > 0, "#FF0000", "#008000"),  // Red for increase, Green for decrease
+			    "#000000"  // Default black
+			)
+			
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 31ac7ef5-42e1-410f-9d4d-780dfd82daf6
 
 	column record_id
 		dataType: int64
