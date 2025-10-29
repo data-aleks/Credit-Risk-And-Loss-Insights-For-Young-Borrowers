@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "9743638860a1e0c3ec83",
   "position": {
-    "x": 7.7777777777776009,
-    "y": 640.2,
+    "x": 20,
+    "y": 682.36838918657077,
     "z": 6000,
-    "height": 108.33333333333334,
-    "width": 320
+    "height": 86,
+    "width": 376,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -26,7 +27,7 @@
                 }
               },
               "queryRef": "Risk Threshold.Risk Threshold",
-              "nativeQueryRef": "Risk Threshold",
+              "nativeQueryRef": "Risk Threshold1",
               "active": true
             }
           ]
@@ -40,7 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "0.3D"
+                  "Value": "0.35D"
                 }
               }
             }
@@ -77,13 +78,54 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "0.3D"
+                            "Value": "0.35D"
                           }
                         }
                       }
                     }
                   }
                 ]
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
               }
             }
           }

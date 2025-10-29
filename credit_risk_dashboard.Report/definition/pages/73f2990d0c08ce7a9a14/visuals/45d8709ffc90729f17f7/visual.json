@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "45d8709ffc90729f17f7",
   "position": {
-    "x": 7.7777777777776009,
-    "y": 515.40000000000009,
+    "x": 20,
+    "y": 565.90170435624964,
     "z": 4000,
-    "height": 91.666666666666671,
-    "width": 316.66666666666669
+    "height": 47.142857142857146,
+    "width": 373.57142857142861,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -40,7 +41,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Basic'"
                 }
               }
             }
@@ -49,7 +50,43 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },

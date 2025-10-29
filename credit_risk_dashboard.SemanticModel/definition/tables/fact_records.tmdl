@@ -6,13 +6,14 @@ table fact_records
 			CALCULATE(
 			    DISTINCTCOUNT(fact_records[record_id]),
 			    FILTER(dim_status, dim_status[status] = "Default"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
 			)
 		formatString: 0
 		displayFolder: [Age Below 30]
 		lineageTag: f83eb75c-cff4-4701-a10a-ab7b27dcc9d2
 
-	measure 'Total Records' = CALCULATE(DISTINCTCOUNT(fact_records[record_id]), FILTER(dim_client, dim_client[age] <= 30))
+	measure 'Total Records' = CALCULATE(DISTINCTCOUNT(fact_records[record_id]), FILTER(dim_client, dim_client[age] <= 30), FILTER(dim_client, dim_client[employment_length] < 11))
 		formatString: 0
 		displayFolder: [Age Below 30]
 		lineageTag: 0caec8ef-cac7-47c1-979b-53b1086f328d
@@ -22,7 +23,14 @@ table fact_records
 		displayFolder: [Age Below 30]
 		lineageTag: 517d3640-abec-4dc0-91ba-5e9c59f64f95
 
-	measure 'Default Loss' = CALCULATE(SUM(fact_records[amount]), FILTER(dim_status, dim_status[status] = "Default"), FILTER(dim_client, dim_client[age] <= 30) )
+	measure 'Default Loss' = ```
+			CALCULATE(
+			    SUM(fact_records[amount]), 
+			    FILTER(dim_status, dim_status[status] = "Default"), 
+			    FILTER(dim_client, dim_client[age] <= 30) ,
+			    FILTER(dim_client, dim_client[employment_length] < 11)    
+			)
+			```
 		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
 		displayFolder: [Age Below 30]
 		lineageTag: 6fb271c0-11eb-4cb6-ac8a-d99c00266e87
@@ -30,7 +38,12 @@ table fact_records
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	measure 'Active Amount' = ```
-			CALCULATE(SUM(fact_records[amount]), FILTER(dim_status, dim_status[status] = "Active"), FILTER(dim_client, dim_client[age] <= 30)) 
+			CALCULATE(
+			    SUM(fact_records[amount]), 
+			    FILTER(dim_status, dim_status[status] = "Active"), 
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
+			) 
 			```
 		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
 		displayFolder: [Age Below 30]
@@ -101,7 +114,12 @@ table fact_records
 		lineageTag: 90de3c48-dac4-4a63-986c-568312df6e94
 
 	measure 'Active Accounts < 30' = ```
-			CALCULATE(DISTINCTCOUNT(fact_records[record_id]), FILTER(dim_status, dim_status[status] = "Active"), FILTER(dim_client, dim_client[age] <= 30)) 
+			CALCULATE(
+			    DISTINCTCOUNT(fact_records[record_id]), 
+			    FILTER(dim_status, dim_status[status] = "Active"), 
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
+			) 
 			```
 		formatString: 0
 		displayFolder: [Age Below 30]
@@ -118,8 +136,8 @@ table fact_records
 			SWITCH(
 			    TRUE(),
 			    MAX([risk_score]) <= [Risk Threshold Value], "Low",
-			    MAX([risk_score]) <= [Risk Threshold Value] + 0.2, "Medium",
-			    MAX([risk_score]) > [Risk Threshold Value] + 0.2, "High",
+			    MAX([risk_score]) <= [Risk Threshold Value] + 0.25, "Medium",
+			    MAX([risk_score]) > [Risk Threshold Value] + 0.25, "High",
 			    BLANK()
 			)
 		displayFolder: [Classification Dynamic]
@@ -131,7 +149,8 @@ table fact_records
 			    COUNTROWS(fact_records),
 			    FILTER(fact_records, [risk_score] <= [Risk Threshold Value]),
 			    FILTER(dim_status, dim_status[status] = "Active"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
 			)
 		formatString: 0
 		displayFolder: [Classification Dynamic]
@@ -143,10 +162,11 @@ table fact_records
 			    COUNTROWS(fact_records),
 			    FILTER(fact_records, 
 			        [risk_score] > [Risk Threshold Value] &&
-			        [risk_score] <= [Risk Threshold Value] + 0.3
+			        [risk_score] <= [Risk Threshold Value] + 0.25
 			    ),
 			    FILTER(dim_status, dim_status[status] = "Active"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
 			)
 			```
 		formatString: 0
@@ -157,9 +177,10 @@ table fact_records
 			
 			CALCULATE(
 			    COUNTROWS(fact_records),
-			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.3),
+			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.25),
 			    FILTER(dim_status, dim_status[status] = "Active"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11)
 			)
 		formatString: 0
 		displayFolder: [Classification Dynamic]
@@ -170,6 +191,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11),
 			    FILTER(fact_records, fact_records[risk_level_static] = "High")
 			)
 			```
@@ -182,6 +204,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11),    
 			    FILTER(fact_records, fact_records[risk_level_static] = "Medium")
 			)
 			```
@@ -194,6 +217,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11),
 			    FILTER(fact_records, fact_records[risk_level_static] = "Low")
 			)
 			```
@@ -201,18 +225,104 @@ table fact_records
 		displayFolder: [Classification Static]
 		lineageTag: 5333eb7e-b880-46dc-a980-841c13c0af66
 
-	measure 'Static vs Dynamic Classification Change' =
-			IF(
+	measure 'Static vs Dynamic Classification Change' = ```
+			
+			IF (
 			    [High Risk Accounts] <> [high_risk_count [dynamic]]],
-			    DIVIDE(
-			        [high_risk_count [dynamic]]] - [High Risk Accounts],
-			        [High Risk Accounts]
-			    ),
+			    VAR AmountChange = [high_risk_count [dynamic]]] - [High Risk Accounts]
+			    VAR PercentChange = DIVIDE(AmountChange, [High Risk Accounts])
+			    VAR Icon = 
+			        SWITCH(
+			            TRUE(),
+			            AmountChange > 0, "🔴🔺",  // Red circle + red arrow for increase
+			            AmountChange < 0, "🟢🔻",  // Green circle + green arrow for decrease
+			            "⚪"                        // Neutral icon
+			        )
+			    RETURN
+			        Icon & " " & FORMAT(AmountChange, "#,##0")  & " (" &  FORMAT(PercentChange, "0.00%") & ")",
 			    BLANK()
 			)
-		formatString: 0.00%;-0.00%;0.00%
+			```
 		displayFolder: [Classification Comparison]
 		lineageTag: 79141b81-3f28-4337-9ceb-be7977a9f4e9
+
+	measure 'Static High Risk Default Loss' = ```
+			CALCULATE(
+			     SUM(fact_records[amount]),
+			     FILTER(dim_status, dim_status[status] = "Active"), 
+			     FILTER(dim_client, dim_client[age] < 30),
+			     FILTER(dim_client, dim_client[employment_length] < 11),
+			     FILTER(fact_records, fact_records[risk_level_static] = "High")
+			)
+			```
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: [Classification Static]
+		lineageTag: 5ea4b214-fa09-4285-99a7-1465152fd12e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Dynamic High Risk Default Amount' =
+			CALCULATE(
+			    SUM(fact_records[amount]),
+			    FILTER(dim_client, dim_client[age] < 30),
+			    FILTER(dim_client, dim_client[employment_length] < 11),
+			    FILTER(dim_status, dim_status[status] = "Active"),
+			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.25)
+			)
+		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
+		displayFolder: [Classification Dynamic]
+		lineageTag: dbffb350-ac8d-41c7-82b2-590db35b798e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Static vs Dynamic Classification Amount' = ```
+			
+			IF (
+			    [Static High Risk Default Loss] <> [Dynamic High Risk Default Amount],
+			    VAR AmountChange = [Dynamic High Risk Default Amount] - [Static High Risk Default Loss]
+			    VAR PercentChange = DIVIDE(AmountChange, [Static High Risk Default Loss])
+			    VAR Icon = 
+			        SWITCH(
+			            TRUE(),
+			            AmountChange > 0, "🔴🔺",  // Red up arrow for increase
+			            AmountChange < 0, "🟢🔻",  // Green down arrow for decrease
+			            "⚪"                       // Neutral icon
+			        )
+			    RETURN
+			        Icon & " " & FORMAT(AmountChange, "#,##0")  & " ("  & FORMAT(PercentChange, "0.00%") & ")",
+			    BLANK()
+			)
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 5800e9b8-4c5f-4508-b26f-e2d697bdd985
+
+	measure 'Classification Change Color' = ```
+			
+			IF (
+			    [High Risk Accounts] <> [high_risk_count [dynamic]]],
+			    VAR AmountChange = [high_risk_count [dynamic]]] - [High Risk Accounts]
+			    RETURN
+			        IF(AmountChange > 0, "#FF0000", "#008000"),  // Red for increase, Green for decrease
+			    "#000000"  // Default black
+			)
+			
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 9d0ef098-4466-4ff7-a87e-bfebbf39c850
+
+	measure 'Classification Amount Color' = ```
+			
+			IF (
+			    [Static High Risk Default Loss] <> [Dynamic High Risk Default Amount],
+			    VAR AmountChange = [Dynamic High Risk Default Amount] - [Static High Risk Default Loss]
+			    RETURN
+			        IF(AmountChange > 0, "#FF0000", "#008000"),  // Red for increase, Green for decrease
+			    "#000000"  // Default black
+			)
+			
+			```
+		displayFolder: [Classification Comparison]
+		lineageTag: 31ac7ef5-42e1-410f-9d4d-780dfd82daf6
 
 	column record_id
 		dataType: int64

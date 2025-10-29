@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "209b7e59b5bc4fdc8dbb",
   "position": {
-    "x": 12.833333333333334,
-    "y": 80,
+    "x": 19.132867132867073,
+    "y": 64.62229128895784,
     "z": 1000,
-    "height": 186.66666666666666,
-    "width": 486.81111111111113
+    "height": 172.19580419580419,
+    "width": 438.041958041958
   },
   "visual": {
     "visualType": "columnChart",
@@ -79,6 +79,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -92,6 +99,30 @@
                   "Value": "false"
                 }
               }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "70L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#131312'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -99,6 +130,19 @@
     },
     "visualContainerObjects": {
       "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
         {
           "properties": {
             "show": {
