@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "8f767e15a0519906cd4c",
+  "name": "f44b68d10ab4e024454b",
   "position": {
-    "x": 10,
-    "y": 639.01760662177344,
-    "z": 1000,
-    "height": 229.55001402918077,
-    "width": 486.66666666666669,
-    "tabOrder": 2000
+    "x": 19.616179509890753,
+    "y": 53.170947741364031,
+    "z": 500,
+    "height": 182.5,
+    "width": 432.5,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -42,11 +42,11 @@
                       "Entity": "fact_records"
                     }
                   },
-                  "Property": "Default Rate"
+                  "Property": "Active Accounts < 30"
                 }
               },
-              "queryRef": "fact_records.Default Rate",
-              "nativeQueryRef": "Default Rate"
+              "queryRef": "fact_records.Active Accounts < 30",
+              "nativeQueryRef": "Active Accounts < 30"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "fact_records"
                   }
                 },
-                "Property": "Default Rate"
+                "Property": "Active Accounts < 30"
               }
             },
             "direction": "Descending"
@@ -80,6 +80,24 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6C757D'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -91,6 +109,48 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6C757D'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#131312'"
+                    }
+                  }
                 }
               }
             }
@@ -105,7 +165,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Default Rate'"
+                  "Value": "'Active accounts'"
                 }
               }
             },
@@ -115,6 +175,26 @@
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -122,5 +202,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c414427061efd828cabf"
+  "parentGroupName": "b544709eb9898f63eba5"
 }

@@ -1559,7 +1559,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "default amount": {
+			          "default proportion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -4879,16 +4879,6 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "score": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
 			          "mark": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -4960,6 +4950,16 @@ cultureInfo en-GB
 			        },
 			        {
 			          "standing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "class": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5098,16 +5098,6 @@ cultureInfo en-GB
 			        },
 			        {
 			          "category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5309,9 +5299,2906 @@ cultureInfo en-GB
 			          }
 			        }
 			      ]
+			    },
+			    "fact_record.risk_score": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "risk_score"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk score": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk_score": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "score": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.risk_level_static": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "risk_level_static"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk level static": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk_level_static": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "static": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "level static": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk quantity static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "risk threshold static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "quantity static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "threshold static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "risk amount static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "risk grade static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "risk point static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "risk rank static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "risk tier static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "amount static": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.risk_level_classification_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "risk_level_classification [dynamic]"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk_level_classification [dynamic]": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risk_level_classification": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.low_risk_count_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "low_risk_count [dynamic]"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "low_risk_count [dynamic]": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "low_risk_count": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Low Risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.medium_risk_count_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "medium_risk_count [dynamic]"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medium_risk_count [dynamic]": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medium_risk_count": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Medium Risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.high_risk_count_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "high_risk_count [dynamic]"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high_risk_count [dynamic]": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "high_risk_count": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "High Risk": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.high_risk_accounts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "High Risk Accounts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high risk accounts": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "high risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "high risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "high risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "high risk justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.medium_risk_accounts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Medium Risk Accounts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medium risk accounts": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "medium risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "medium risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "medium risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "medium risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "medium risk justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.low_risk_accounts": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Low Risk Accounts"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "low risk accounts": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk accounts": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "low risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "low risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "low risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "low risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "low risk justification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "risk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "risk interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.static_vs_dynamic_classification_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Static vs Dynamic Classification Change"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "static vs dynamic classification change": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "static vs dynamic classification alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification revolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification amendment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification difference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static vs dynamic classification cash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.static_high_risk_default_loss": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Static High Risk Default Loss"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "static high risk default loss": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "loss": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk default loss": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high risk default loss": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "static high risk default injury": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static high risk default forfeiture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "high risk default injury": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high risk default forfeiture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "risk default injury": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "risk default forfeiture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "static high risk default damage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static high risk default harm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static high risk default cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static high risk default hurt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "Potential High Risk Default Loss": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.dynamic_high_risk_default_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Dynamic High Risk Default Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic high risk default amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "default amount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk default amount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high risk default amount": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic high risk default quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dynamic high risk default volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dynamic high risk default expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "dynamic high risk default extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "high risk default quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high risk default volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high risk default expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high risk default extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "risk default quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "risk default volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.static_vs_dynamic_classification_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Static vs Dynamic Classification Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "static vs dynamic classification amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "static vs dynamic classification quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "static vs dynamic classification sum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static vs dynamic classification total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "static vs dynamic classification aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.classification_change_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Classification Change Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "classification change color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "change color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "classification change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "classification change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification change dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification change paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification change pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fact_record.classification_amount_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_records",
+			          "ConceptualProperty": "Classification Amount Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "classification amount color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "amount color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "classification amount hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "amount hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "classification amount tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification amount shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification amount dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification amount paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "classification amount pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "amount tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "amount shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "dim_status.status_binary": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_status",
+			          "ConceptualProperty": "status_binary"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status binary": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status_binary": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "binary": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank binary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "feature_importance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "feature_importance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "feature importance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "feature_importance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "importance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "feature status": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "feature reputation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "feature prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reputation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "feature rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "feature position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "feature standing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "feature_importance.feature": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "feature_importance",
+			          "ConceptualProperty": "Feature"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "feature": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nose": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mouth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "chin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "feature_importance.coefficient": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "feature_importance",
+			          "ConceptualProperty": "Coefficient"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "coefficient": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "measurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "constant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "factor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "risk_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Risk Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk threshold": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.8439
+			          }
+			        },
+			        {
+			          "risk brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "risk onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "risk inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "risk verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk dawn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk beginning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "risk_threshold.risk_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Risk Threshold",
+			          "ConceptualProperty": "Risk Threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "risk onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "risk inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "risk verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk dawn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "risk beginning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "risk_threshold.risk_threshold_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Risk Threshold",
+			          "ConceptualProperty": "Risk Threshold Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risk threshold value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "threshold value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "risk threshold assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "threshold assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "risk threshold worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk threshold price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk threshold cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk threshold charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "risk threshold rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "threshold worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "threshold price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dim_status_has_status_binary": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_status"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_status": {
+			          "Target": {
+			            "Entity": "dim_status"
+			          }
+			        },
+			        "dim_status.status_binary": {
+			          "Target": {
+			            "Entity": "dim_status.status_binary"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_status"
+			            },
+			            "Object": {
+			              "Role": "dim_status.status_binary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_statuses_have_status_binaries"
+			        }
+			      ]
+			    },
+			    "fact_record_has_classification_amount_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.classification_amount_color": {
+			          "Target": {
+			            "Entity": "fact_record.classification_amount_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.classification_amount_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_classification_amount_color"
+			        }
+			      ]
+			    },
+			    "fact_record_has_classification_change_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.classification_change_color": {
+			          "Target": {
+			            "Entity": "fact_record.classification_change_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.classification_change_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_classification_change_color"
+			        }
+			      ]
+			    },
+			    "fact_record_has_static_vs_dynamic_classification_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.static_vs_dynamic_classification_amount": {
+			          "Target": {
+			            "Entity": "fact_record.static_vs_dynamic_classification_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.static_vs_dynamic_classification_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_static_vs_dynamic_classification_amount"
+			        }
+			      ]
+			    },
+			    "fact_record_has_dynamic_high_risk_default_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.dynamic_high_risk_default_amount": {
+			          "Target": {
+			            "Entity": "fact_record.dynamic_high_risk_default_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.dynamic_high_risk_default_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_dynamic_high_risk_default_amount"
+			        }
+			      ]
+			    },
+			    "fact_record_has_static_high_risk_default_loss": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.static_high_risk_default_loss": {
+			          "Target": {
+			            "Entity": "fact_record.static_high_risk_default_loss"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.static_high_risk_default_loss"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_static_high_risk_default_loss"
+			        }
+			      ]
+			    },
+			    "fact_record_has_static_vs_dynamic_classification_change": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.static_vs_dynamic_classification_change": {
+			          "Target": {
+			            "Entity": "fact_record.static_vs_dynamic_classification_change"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.static_vs_dynamic_classification_change"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_static_vs_dynamic_classification_change"
+			        }
+			      ]
+			    },
+			    "fact_record_has_low_risk_accounts": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.low_risk_accounts": {
+			          "Target": {
+			            "Entity": "fact_record.low_risk_accounts"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.low_risk_accounts"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_low_risk_accounts"
+			        }
+			      ]
+			    },
+			    "fact_record_has_medium_risk_accounts": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.medium_risk_accounts": {
+			          "Target": {
+			            "Entity": "fact_record.medium_risk_accounts"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.medium_risk_accounts"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_medium_risk_accounts"
+			        }
+			      ]
+			    },
+			    "fact_record_has_high_risk_accounts": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.high_risk_accounts": {
+			          "Target": {
+			            "Entity": "fact_record.high_risk_accounts"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.high_risk_accounts"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_high_risk_accounts"
+			        }
+			      ]
+			    },
+			    "fact_record_has_high_risk_count_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.high_risk_count_dynamic": {
+			          "Target": {
+			            "Entity": "fact_record.high_risk_count_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.high_risk_count_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_high_risk_count_dynamic"
+			        }
+			      ]
+			    },
+			    "fact_record_has_medium_risk_count_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.medium_risk_count_dynamic": {
+			          "Target": {
+			            "Entity": "fact_record.medium_risk_count_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.medium_risk_count_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_medium_risk_count_dynamic"
+			        }
+			      ]
+			    },
+			    "fact_record_has_low_risk_count_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.low_risk_count_dynamic": {
+			          "Target": {
+			            "Entity": "fact_record.low_risk_count_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.low_risk_count_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_low_risk_count_dynamic"
+			        }
+			      ]
+			    },
+			    "fact_record_has_risk_level_classification_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.risk_level_classification_dynamic": {
+			          "Target": {
+			            "Entity": "fact_record.risk_level_classification_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.risk_level_classification_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_risk_level_classification_dynamic"
+			        }
+			      ]
+			    },
+			    "risk_threshold_has_fact_record_risk_level_classification_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Risk Threshold"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "risk_threshold": {
+			          "Target": {
+			            "Entity": "risk_threshold"
+			          }
+			        },
+			        "fact_record.risk_level_classification_dynamic": {
+			          "Target": {
+			            "Entity": "fact_record.risk_level_classification_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "risk_threshold"
+			            },
+			            "Object": {
+			              "Role": "fact_record.risk_level_classification_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "risk_thresholds_have_risk_level_classification_dynamic"
+			        }
+			      ]
+			    },
+			    "fact_record_has_risk_level_static": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.risk_level_static": {
+			          "Target": {
+			            "Entity": "fact_record.risk_level_static"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.risk_level_static"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_risk_level_static"
+			        }
+			      ]
+			    },
+			    "fact_record_has_risk_score": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_records"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_record": {
+			          "Target": {
+			            "Entity": "fact_record"
+			          }
+			        },
+			        "fact_record.risk_score": {
+			          "Target": {
+			            "Entity": "fact_record.risk_score"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_record"
+			            },
+			            "Object": {
+			              "Role": "fact_record.risk_score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_records_have_risk_scores"
+			        }
+			      ]
+			    },
+			    "dim_status_has_status": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_status"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_status": {
+			          "Target": {
+			            "Entity": "dim_status"
+			          }
+			        },
+			        "dim_status.status": {
+			          "Target": {
+			            "Entity": "dim_status.status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_status"
+			            },
+			            "Object": {
+			              "Role": "dim_status.status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_statuses_have_statuses"
+			        }
+			      ]
+			    },
 			    "dim_grade_has_grade": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_grade"
@@ -6642,20 +9529,20 @@ cultureInfo en-GB
 			        }
 			      ]
 			    },
-			    "dim_status_has_status": {
+			    "feature_importance_has_feature": {
 			      "Binding": {
-			        "ConceptualEntity": "dim_status"
+			        "ConceptualEntity": "feature_importance"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_status": {
+			        "feature_importance": {
 			          "Target": {
-			            "Entity": "dim_status"
+			            "Entity": "feature_importance"
 			          }
 			        },
-			        "dim_status.status": {
+			        "feature_importance.feature": {
 			          "Target": {
-			            "Entity": "dim_status.status"
+			            "Entity": "feature_importance.feature"
 			          }
 			        }
 			      },
@@ -6663,15 +9550,114 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_status"
+			              "Role": "feature_importance"
 			            },
 			            "Object": {
-			              "Role": "dim_status.status"
+			              "Role": "feature_importance.feature"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_statuses_have_statuses"
+			          "ID": "feature_importance_have_features"
+			        }
+			      ]
+			    },
+			    "feature_importance_has_coefficient": {
+			      "Binding": {
+			        "ConceptualEntity": "feature_importance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "feature_importance": {
+			          "Target": {
+			            "Entity": "feature_importance"
+			          }
+			        },
+			        "feature_importance.coefficient": {
+			          "Target": {
+			            "Entity": "feature_importance.coefficient"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "feature_importance"
+			            },
+			            "Object": {
+			              "Role": "feature_importance.coefficient"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "feature_importance_have_coefficients"
+			        }
+			      ]
+			    },
+			    "risk_threshold_has_risk_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "Risk Threshold"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "risk_threshold": {
+			          "Target": {
+			            "Entity": "risk_threshold"
+			          }
+			        },
+			        "risk_threshold.risk_threshold": {
+			          "Target": {
+			            "Entity": "risk_threshold.risk_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "risk_threshold"
+			            },
+			            "Object": {
+			              "Role": "risk_threshold.risk_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "risk_thresholds_have_risk_thresholds"
+			        }
+			      ]
+			    },
+			    "risk_threshold_has_risk_threshold_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Risk Threshold"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "risk_threshold": {
+			          "Target": {
+			            "Entity": "risk_threshold"
+			          }
+			        },
+			        "risk_threshold.risk_threshold_value": {
+			          "Target": {
+			            "Entity": "risk_threshold.risk_threshold_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "risk_threshold"
+			            },
+			            "Object": {
+			              "Role": "risk_threshold.risk_threshold_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "risk_thresholds_have_risk_threshold_value"
 			        }
 			      ]
 			    },

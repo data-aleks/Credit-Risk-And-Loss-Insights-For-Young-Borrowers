@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "f386279e2d1f15ff0c27",
+  "name": "97ca430e890702b0593b",
   "position": {
-    "x": 15.642998027613412,
-    "y": 372.54258440890396,
-    "z": 2000,
-    "height": 229.87654320987659,
-    "width": 487.66666666666669,
-    "tabOrder": 3000
+    "x": 19.950546206082059,
+    "y": 72.920726306465923,
+    "z": 500,
+    "height": 166.66666666666669,
+    "width": 435.83333333333337,
+    "tabOrder": 15001
   },
   "visual": {
     "visualType": "columnChart",
@@ -42,11 +42,11 @@
                       "Entity": "fact_records"
                     }
                   },
-                  "Property": "Default Records"
+                  "Property": "Default Rate"
                 }
               },
-              "queryRef": "fact_records.Default Records",
-              "nativeQueryRef": "Default Records"
+              "queryRef": "fact_records.Default Rate",
+              "nativeQueryRef": "Default Rate"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "fact_records"
                   }
                 },
-                "Property": "Default Records"
+                "Property": "Default Rate"
               }
             },
             "direction": "Descending"
@@ -80,6 +80,24 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6C757D'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -91,6 +109,48 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6C757D'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#131312'"
+                    }
+                  }
                 }
               }
             }
@@ -105,7 +165,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Defaults'"
+                  "Value": "'Default Rate'"
                 }
               }
             },
@@ -115,6 +175,26 @@
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -122,5 +202,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c414427061efd828cabf"
+  "parentGroupName": "f988591f03a14048cdd6"
 }

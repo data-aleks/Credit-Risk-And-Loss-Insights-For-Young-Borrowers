@@ -6,7 +6,8 @@ table fact_records
 			CALCULATE(
 			    DISTINCTCOUNT(fact_records[record_id]),
 			    FILTER(dim_status, dim_status[status] = "Default"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17)
 			)
 		formatString: 0
 		displayFolder: [Age Below 30]
@@ -22,7 +23,14 @@ table fact_records
 		displayFolder: [Age Below 30]
 		lineageTag: 517d3640-abec-4dc0-91ba-5e9c59f64f95
 
-	measure 'Default Loss' = CALCULATE(SUM(fact_records[amount]), FILTER(dim_status, dim_status[status] = "Default"), FILTER(dim_client, dim_client[age] <= 30) )
+	measure 'Default Loss' = ```
+			CALCULATE(
+			    SUM(fact_records[amount]), 
+			    FILTER(dim_status, dim_status[status] = "Default"), 
+			    FILTER(dim_client, dim_client[age] <= 30) ,
+			    FILTER(dim_client, dim_client[employment_length] < 17)    
+			)
+			```
 		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
 		displayFolder: [Age Below 30]
 		lineageTag: 6fb271c0-11eb-4cb6-ac8a-d99c00266e87
@@ -30,7 +38,12 @@ table fact_records
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	measure 'Active Amount' = ```
-			CALCULATE(SUM(fact_records[amount]), FILTER(dim_status, dim_status[status] = "Active"), FILTER(dim_client, dim_client[age] <= 30)) 
+			CALCULATE(
+			    SUM(fact_records[amount]), 
+			    FILTER(dim_status, dim_status[status] = "Active"), 
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17)
+			) 
 			```
 		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
 		displayFolder: [Age Below 30]
@@ -101,7 +114,12 @@ table fact_records
 		lineageTag: 90de3c48-dac4-4a63-986c-568312df6e94
 
 	measure 'Active Accounts < 30' = ```
-			CALCULATE(DISTINCTCOUNT(fact_records[record_id]), FILTER(dim_status, dim_status[status] = "Active"), FILTER(dim_client, dim_client[age] <= 30)) 
+			CALCULATE(
+			    DISTINCTCOUNT(fact_records[record_id]), 
+			    FILTER(dim_status, dim_status[status] = "Active"), 
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17)
+			) 
 			```
 		formatString: 0
 		displayFolder: [Age Below 30]
@@ -118,8 +136,8 @@ table fact_records
 			SWITCH(
 			    TRUE(),
 			    MAX([risk_score]) <= [Risk Threshold Value], "Low",
-			    MAX([risk_score]) <= [Risk Threshold Value] + 0.2, "Medium",
-			    MAX([risk_score]) > [Risk Threshold Value] + 0.2, "High",
+			    MAX([risk_score]) <= [Risk Threshold Value] + 0.25, "Medium",
+			    MAX([risk_score]) > [Risk Threshold Value] + 0.25, "High",
 			    BLANK()
 			)
 		displayFolder: [Classification Dynamic]
@@ -131,7 +149,8 @@ table fact_records
 			    COUNTROWS(fact_records),
 			    FILTER(fact_records, [risk_score] <= [Risk Threshold Value]),
 			    FILTER(dim_status, dim_status[status] = "Active"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17)
 			)
 		formatString: 0
 		displayFolder: [Classification Dynamic]
@@ -143,7 +162,7 @@ table fact_records
 			    COUNTROWS(fact_records),
 			    FILTER(fact_records, 
 			        [risk_score] > [Risk Threshold Value] &&
-			        [risk_score] <= [Risk Threshold Value] + 0.3
+			        [risk_score] <= [Risk Threshold Value] + 0.25
 			    ),
 			    FILTER(dim_status, dim_status[status] = "Active"),
 			    FILTER(dim_client, dim_client[age] <= 30)
@@ -157,9 +176,10 @@ table fact_records
 			
 			CALCULATE(
 			    COUNTROWS(fact_records),
-			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.3),
+			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.25),
 			    FILTER(dim_status, dim_status[status] = "Active"),
-			    FILTER(dim_client, dim_client[age] <= 30)
+			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17)
 			)
 		formatString: 0
 		displayFolder: [Classification Dynamic]
@@ -170,6 +190,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17),
 			    FILTER(fact_records, fact_records[risk_level_static] = "High")
 			)
 			```
@@ -182,6 +203,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17),    
 			    FILTER(fact_records, fact_records[risk_level_static] = "Medium")
 			)
 			```
@@ -194,6 +216,7 @@ table fact_records
 			    DISTINCTCOUNT(fact_records[record_id]), 
 			    FILTER(dim_status, dim_status[status] = "Active"), 
 			    FILTER(dim_client, dim_client[age] <= 30),
+			    FILTER(dim_client, dim_client[employment_length] < 17),
 			    FILTER(fact_records, fact_records[risk_level_static] = "Low")
 			)
 			```
@@ -215,19 +238,22 @@ table fact_records
 			            "⚪"                        // Neutral icon
 			        )
 			    RETURN
-			        Icon & " " & FORMAT(PercentChange, "0.00%") & " (" & FORMAT(AmountChange, "#,##0") & ")",
+			        Icon & " " & FORMAT(AmountChange, "#,##0")  & " (" &  FORMAT(PercentChange, "0.00%") & ")",
 			    BLANK()
 			)
 			```
 		displayFolder: [Classification Comparison]
 		lineageTag: 79141b81-3f28-4337-9ceb-be7977a9f4e9
 
-	measure 'Static High Risk Default Loss' =
+	measure 'Static High Risk Default Loss' = ```
 			CALCULATE(
 			     SUM(fact_records[amount]),
+			     FILTER(dim_status, dim_status[status] = "Active"), 
 			     FILTER(dim_client, dim_client[age] < 30),
+			     FILTER(dim_client, dim_client[employment_length] < 17),
 			     FILTER(fact_records, fact_records[risk_level_static] = "High")
 			)
+			```
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
 		displayFolder: [Classification Static]
 		lineageTag: 5ea4b214-fa09-4285-99a7-1465152fd12e
@@ -238,7 +264,9 @@ table fact_records
 			CALCULATE(
 			    SUM(fact_records[amount]),
 			    FILTER(dim_client, dim_client[age] < 30),
-			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.3)
+			    FILTER(dim_client, dim_client[employment_length] < 17),
+			    FILTER(dim_status, dim_status[status] = "Active"),
+			    FILTER(fact_records, [risk_score] > [Risk Threshold Value] + 0.25)
 			)
 		formatString: "£"#,0.###############;-"£"#,0.###############;"£"#,0.###############
 		displayFolder: [Classification Dynamic]
@@ -260,7 +288,7 @@ table fact_records
 			            "⚪"                       // Neutral icon
 			        )
 			    RETURN
-			        Icon & " " & FORMAT(PercentChange, "0.00%") & " (" & FORMAT(AmountChange, "#,##0") & ")",
+			        Icon & " " & FORMAT(AmountChange, "#,##0")  & " ("  & FORMAT(PercentChange, "0.00%") & ")",
 			    BLANK()
 			)
 			```

@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "98bfa59228ed752bf151",
   "position": {
-    "x": 1056.6666666666667,
-    "y": 784.11113091217521,
+    "x": 1428.3333333333335,
+    "y": 808.88431641518071,
     "z": 7000,
-    "height": 286.66666666666669,
-    "width": 513.33333333333337,
-    "tabOrder": 6000
+    "height": 256.74782358332084,
+    "width": 475.11904761904771,
+    "tabOrder": 7000
   },
   "visualGroup": {
-    "displayName": "Group 1",
+    "displayName": "risk_level_classification",
     "groupMode": "ScaleMode"
   }
 }

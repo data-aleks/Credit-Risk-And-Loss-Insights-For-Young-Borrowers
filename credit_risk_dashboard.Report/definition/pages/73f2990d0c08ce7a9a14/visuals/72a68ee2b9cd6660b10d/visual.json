@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "fc7f6f69489ff0643921",
+  "name": "72a68ee2b9cd6660b10d",
   "position": {
-    "x": 8.3333333333333357,
-    "y": 15.510136083052755,
-    "z": 4000,
-    "height": 68.244598765432116,
-    "width": 496.66666666666669,
-    "tabOrder": 4000
+    "x": 18.666666666666629,
+    "y": 9.78235025148598,
+    "z": 1000,
+    "height": 47,
+    "width": 444
   },
   "visual": {
     "visualType": "textbox",
@@ -19,12 +18,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Default Accounts by Age Bracket",
+                    "value": "Defaults by Age Brackets",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "16pt",
-                      "color": "#000000"
+                      "fontSize": "16pt"
                     }
                   }
                 ]
@@ -34,7 +32,22 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c414427061efd828cabf"
+  "parentGroupName": "35fb7a98fa93d1d54fbc"
 }
